@@ -1,5 +1,3 @@
-'use client'
-
 import Posts from '@/components/posts'
 
 export default function IndexPage() {

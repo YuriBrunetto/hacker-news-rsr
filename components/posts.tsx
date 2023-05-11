@@ -7,10 +7,13 @@ async function fetchData() {
 
 const Posts = async () => {
   const posts = await fetchData()
+  console.log(posts)
+
+  if (posts === null) return <p>nothin</p>
 
   return (
     <>
-      {posts?.map((post) => (
+      {posts.map((post) => (
         <div
           key={post.id}
           className="flex max-w-[980px] flex-col items-start gap-2"
