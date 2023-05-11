@@ -1,13 +1,12 @@
 import { HNItem, getPosts } from '@/lib/hn-api'
 
 async function fetchData() {
-  const posts: HNItem[] | null = await getPosts()
+  const posts: HNItem[] | null = await getPosts(20)
   return posts
 }
 
 const Posts = async () => {
   const posts = await fetchData()
-  console.log(posts)
 
   if (posts === null) return <p>nothin</p>
 

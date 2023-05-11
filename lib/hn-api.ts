@@ -11,7 +11,7 @@ export type HNItem = {
   url: string
 }
 
-export async function getNewPosts(limit = 10): Promise<HNIdItem[]> {
+async function getNewPosts(limit: number): Promise<HNIdItem[]> {
   const response = await fetch(
     'https://hacker-news.firebaseio.com/v0/topstories.json'
   )
@@ -28,9 +28,9 @@ async function getItemById(id: number): Promise<HNItem> {
   return data
 }
 
-export async function getPosts(): Promise<HNItem[] | null> {
+export async function getPosts(limit = 10): Promise<HNItem[] | null> {
   try {
-    const ids: HNIdItem[] = await getNewPosts()
+    const ids: HNIdItem[] = await getNewPosts(limit)
     const posts: Promise<HNItem>[] = ids.map(
       async (id: HNIdItem) => await getItemById(id)
     )
