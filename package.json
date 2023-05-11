@@ -17,6 +17,7 @@
     "class-variance-authority": "^0.4.0",
     "clsx": "^1.2.1",
     "cmdk": "^0.2.0",
+    "javascript-time-ago": "^2.5.9",
     "lucide-react": "0.105.0-alpha.4",
     "next": "^13.3.0",
     "next-themes": "^0.2.1",
