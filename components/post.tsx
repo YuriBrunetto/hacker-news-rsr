@@ -3,7 +3,6 @@ import TimeAgo from 'javascript-time-ago'
 import en from 'javascript-time-ago/locale/en'
 
 import { HNItem } from '@/lib/hn-api'
-import { Badge } from '@/components/ui/badge'
 
 TimeAgo.addDefaultLocale(en)
 
@@ -30,16 +29,10 @@ const Post: React.FC<PostProps> = ({ post, i }) => {
           {post.title}{' '}
         </p>
       </div>
-      <p className="text-[12px] text-white/[0.7]">
-        <Badge
-          variant="secondary"
-          className="mr-2 bg-zinc-900 text-[8px] hover:bg-zinc-950"
-        >
-          {post.type}
-        </Badge>
+      <div className="text-[12px] text-white/[0.7]">
         {post.score} points by {post.by} &mdash;{' '}
         {timeAgo.format(post.time * 1000)}
-      </p>
+      </div>
     </Link>
   )
 }
