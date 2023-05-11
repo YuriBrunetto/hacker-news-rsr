@@ -4,6 +4,7 @@ import { Metadata } from 'next'
 import { siteConfig } from '@/config/site'
 import { fontSans } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
+import Footer from '@/components/footer'
 import { SiteHeader } from '@/components/site-header'
 import { ThemeProvider } from '@/components/theme-provider'
 
@@ -40,20 +41,21 @@ export default function RootLayout({ children }: RootLayoutProps) {
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="dark">
-            <div className="relative flex min-h-screen flex-col items-center">
+            <div className="relative flex min-h-screen w-full flex-col items-center">
               <SiteHeader />
-              <div className="flex max-w-[980px]">
+              <div className="flex w-full max-w-[980px]">
                 <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
                   {' '}
-                  <div className="flex max-w-[980px] flex-col items-start gap-2">
+                  <div className="flex w-full flex-col items-center gap-2">
                     <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
                       hacker-news-rsr
                     </h1>
-                    <p className="max-w-[700px] text-lg text-muted-foreground sm:text-xl">
+                    <p className="max-w-[300px] text-center text-lg text-muted-foreground sm:text-xl">
                       {siteConfig.description}
                     </p>
                   </div>
                   {children}
+                  <Footer />
                 </section>
               </div>
             </div>
