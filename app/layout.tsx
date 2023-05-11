@@ -5,12 +5,11 @@ import { siteConfig } from '@/config/site'
 import { fontSans } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
 import { SiteHeader } from '@/components/site-header'
-import { TailwindIndicator } from '@/components/tailwind-indicator'
 import { ThemeProvider } from '@/components/theme-provider'
 
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.name,
+    default: 'Hacker News RSR',
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -36,14 +35,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <head />
         <body
           className={cn(
-            'min-h-screen bg-background font-sans antialiased',
+            'min-h-screen bg-gradient-to-b from-zinc-800 to-zinc-950 font-sans antialiased',
             fontSans.variable
           )}
         >
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="relative flex min-h-screen flex-col">
+          <ThemeProvider attribute="class" defaultTheme="dark">
+            <div className="relative flex min-h-screen flex-col items-center">
               <SiteHeader />
-              <div className="flex-1">
+              <div className="flex max-w-[980px]">
                 <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
                   {' '}
                   <div className="flex max-w-[980px] flex-col items-start gap-2">
@@ -58,7 +57,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 </section>
               </div>
             </div>
-            <TailwindIndicator />
           </ThemeProvider>
         </body>
       </html>
