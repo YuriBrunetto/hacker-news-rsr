@@ -1,5 +1,7 @@
 import Posts from '@/components/posts'
 
+export const revalidate = 0
+
 export default function IndexPage() {
   return (
     <main>
