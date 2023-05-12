@@ -6,6 +6,8 @@ async function fetchData() {
   return posts
 }
 
+export const revalidate = 0
+
 const Posts = async () => {
   const posts = await fetchData()
 
