@@ -19,36 +19,36 @@ export const Icons = {
         d="M 50 77 L 50 50 "
         fill="none"
         stroke="rgb(255, 255, 255)"
-        stroke-width="8.78662150719729"
-        stroke-linecap="butt"
+        strokeWidth="8.78662150719729"
+        strokeLinecap="butt"
       ></path>
       <path
         d="M 94.93056731583404 35.622745513916016 L 71.2454833984375 71.2454833984375 "
         fill="none"
         stroke="rgb(255, 255, 255)"
-        stroke-width="8.78662150719729"
-        stroke-linecap="butt"
+        strokeWidth="8.78662150719729"
+        strokeLinecap="butt"
         transform="matrix(1 0 0 1 -21.2455 -21.2455)"
       ></path>
       <path
         d="M -78.93056731583404 36.17028045654297 L -55.67118835449219 71.79300689697266 "
         fill="none"
         stroke="rgb(255, 255, 255)"
-        stroke-width="8.78662150719729"
-        stroke-linecap="butt"
+        strokeWidth="8.78662150719729"
+        strokeLinecap="butt"
         transform="matrix(1 0 0 1 105.396 -21.7213)"
       ></path>
       <rect
         transform=""
         width="100"
         height="23.742591024555463"
-        stroke-width="1"
+        strokeWidth="1"
         stroke="none"
         fill="#FF6600"
-        stroke-opacity="1"
-        fill-opacity="1"
-        stroke-linecap="butt"
-        stroke-linejoin="miter"
+        strokeOpacity="1"
+        fillOpacity="1"
+        strokeLinecap="butt"
+        strokeLinejoin="miter"
       ></rect>
     </svg>
   ),
